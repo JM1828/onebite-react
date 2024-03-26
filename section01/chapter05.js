@@ -15,4 +15,4 @@ let myName = "구준모";
 let myLocation = "부산";
 let introduce = myName + myLocation;
 
-console.log(introduce);
+console.log(introduce);ㅇㅇ
