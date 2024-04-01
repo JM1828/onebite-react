@@ -29,6 +29,8 @@ const TodoItem = ({ id, isDone, content, date, onUpdate, onDelete }) => {
   );
 };
 
+export default memo(TodoItem);
+
 // 고차 컴포넌트 (HOC)
 // export default memo(TodoItem, (prevProps, nextProps) => {
 //   // 반환갑에 따라, Props가 바뀌었는지 안바뀌었는지 판단
@@ -43,4 +45,3 @@ const TodoItem = ({ id, isDone, content, date, onUpdate, onDelete }) => {
 //   return true;
 // });
 
-export default memo(TodoItem);

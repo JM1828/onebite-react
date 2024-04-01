@@ -55,6 +55,7 @@ function reducer(state, action) {
   }
 }
 
+// createContext 함수를 사용하여 TodoStateContext라는 새로운 context 객체를 생성
 export const TodoStateContext = createContext();
 export const TodoDispatchContext = createContext();
 
@@ -101,6 +102,9 @@ function App() {
     return { onCreate, onUpdate, onDelete };
   }, []);
 
+  // TodoStateContext.Provider는 todos라는 값으로 상태를 제공
+  // TodoDispatchContext.Provider는 memoizedDispatch라는 값으로 액션 디스패치 함수를 제공
+  // 이를 통해 Editor와 List 컴포넌트 내에서 해당 상태와 액션 디스패치 함수를 사용할 수 있게됨
   return (
     <div className="App">
       <Header />

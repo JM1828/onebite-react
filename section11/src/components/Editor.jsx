@@ -2,7 +2,6 @@ import './Editor.css';
 import { useState, useRef, useContext } from 'react';
 import { TodoDispatchContext } from '../App';
 
-// Editor는 onCreate이라는 prop을 받는 함수형 컴포넌트
 // 이 prop은 나중에 추가 버튼이 클릭되었을 때 호출될 함수를 나타냄
 const Editor = () => {
   // useContext 훅을 사용하여 TodoDispatchContext에서 제공하는 값을 객체 디스트럭처링을 통해 onCreate 함수로 추출

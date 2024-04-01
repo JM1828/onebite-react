@@ -3,10 +3,9 @@ import { memo, useContext } from 'react';
 import { TodoDispatchContext } from '../App';
 
 // TodoItem 컴포넌트는 id, isDone, content, date, onUpdate, onDelete라는 props를 입력으로 받음
-const TodoItem = ({ id, isDone, content, date}) => {
-
+const TodoItem = ({ id, isDone, content, date }) => {
   // useContext 훅을 사용하여 TodoDispatchContext에서 제공하는 값을 객체 디스트럭처링을 통해 onUpdate와 onDelete 함수로 추출
-  const {onUpdate, onDelete} = useContext(TodoDispatchContext);
+  const { onUpdate, onDelete } = useContext(TodoDispatchContext);
 
   // 체크박스의 변경 이벤트가 발생했을 때 호출되는 onChangeCheckbox 함수
   const onChangeCheckbox = () => {

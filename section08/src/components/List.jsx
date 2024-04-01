@@ -25,9 +25,6 @@ const List = ({ todos, onUpdate, onDelete }) => {
     );
   };
 
-  // getFilteredData 함수를 호출하여 반환된 값을 filteredTodos 변수에 저장
-  const filteredTodos = getFilteredData();
-
   return (
     <div className="List">
       <h4>Todo List ✔</h4>
@@ -39,7 +36,7 @@ const List = ({ todos, onUpdate, onDelete }) => {
       {/* map 함수를 사용하여 filteredTodos 배열을 순회하면서 각 할 일 항목에 대해 TodoItem 컴포넌트를 생성 */}
       {/* 각 할 일 항목은 todo라는 변수에 할당되고, 해당 할 일 항목의 id와 내용 등의 속성을 TodoItem 컴포넌트의 props로 전달 */}
       <div className="todos_wrapper">
-        {filteredTodos.map((todo) => {
+        {getFilteredData().map((todo) => {
           return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} onDelete={onDelete} />;
         })}
       </div>

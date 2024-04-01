@@ -20,7 +20,6 @@ const Editor = ({ onCreate }) => {
     }
   };
 
-  // onSubmit 함수는 추가 버튼이 클릭되었을 때 onCreate 함수를 호출하고, 현재의 content 값을 인자로 전달
   const onSubmit = () => {
     // 입력된 내용(content)이 비어있는지를 확인하고, 비어있을 경우 입력 필드에 포커스를 맞춤
     if (content === '') {

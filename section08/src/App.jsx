@@ -4,8 +4,6 @@ import Header from './components/Header';
 import Editor from './components/Editor';
 import List from './components/List';
 
-// mockData는 초기 ToDo 목록을 나타내는 배열
-// 각 항목은 id, isDone(완료 여부), content(할 일 내용), date(작성 일자)를 가지고 있음
 const mockData = [
   {
     id: 0,
@@ -28,7 +26,6 @@ const mockData = [
 ];
 
 function App() {
-  // useState 훅을 사용하여 todos 상태와 이를 업데이트하는 함수 setTodos를 정의, 초기값으로는 mockData 배열을 사용
   const [todos, setTodos] = useState(mockData);
   // idRef.current 값을 통해 현재의 id 값을 유지하고, 필요한 경우에 이 값을 업데이트할 수 있음
   const idRef = useRef(3);
